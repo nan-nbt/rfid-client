@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD32B20F-4348-4A21-9E74-EFEF4649D540}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFIDClient</RootNamespace>
+    <AssemblyName>RFIDClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>RFIDClient 客戶端程序</ProductName>
+    <PublisherName>EPP Tema HJ</PublisherName>
+    <SuiteName>RFIDClient</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DPCtlUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Components\DigitalPersona\DPCtlUruNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DPUruNet, Version=1.0.0.1, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Components\DigitalPersona\DPUruNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Components\Newtonsoft.Json.bin\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RfidAPI">
+      <HintPath>..\RfidAPI\bin\Debug\RfidAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RFIDModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RFIDServer\RFIDModel\bin\Debug\RFIDModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UHFControl">
+      <HintPath>..\RfidAPI\bin\Debug\UHFControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\Generic\CallbackHandler.cs" />
+    <Compile Include="App_Code\Generic\DigitalPersona.cs" />
+    <Compile Include="App_Code\Generic\Lang.cs" />
+    <Compile Include="App_Code\Generic\ReadWriteJson.cs" />
+    <Compile Include="App_Code\Generic\ServiceClientSend.cs" />
+    <Compile Include="App_Code\Generic\SrvStatic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Code\Generic\AppConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Code\Generic\Common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Code\Generic\ServiceFactory.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOAuth2Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOAuth2Login.Designer.cs">
+      <DependentUpon>FrmOAuth2Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RfidAccessControl\FrmAccessControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidAccessControl\FrmAccessControl.Designer.cs">
+      <DependentUpon>FrmAccessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidShipment\FrmCheckUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidShipment\FrmCheckUser.Designer.cs">
+      <DependentUpon>FrmCheckUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidShipment\FrmShipmentInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidShipment\FrmShipmentInOut.Designer.cs">
+      <DependentUpon>FrmShipmentInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidTagInitial\FrmTagInitial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidTagInitial\FrmTagInitial.Designer.cs">
+      <DependentUpon>FrmTagInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmTagWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmTagWrite.Designer.cs">
+      <DependentUpon>FrmTagWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmTagQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmTagQuery.Designer.cs">
+      <DependentUpon>FrmTagQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmSErpTagWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfidTagWrite\FrmSErpTagWrite.Designer.cs">
+      <DependentUpon>FrmSErpTagWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmModule.Designer.cs">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmSetAlien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmSetAlien.Designer.cs">
+      <DependentUpon>FrmSetAlien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmUserModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmUserModule.Designer.cs">
+      <DependentUpon>FrmUserModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmFingerprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingAuthority\FrmFingerprint.Designer.cs">
+      <DependentUpon>FrmFingerprint.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOAuth2Login.resx">
+      <DependentUpon>FrmOAuth2Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidAccessControl\FrmAccessControl.resx">
+      <DependentUpon>FrmAccessControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidShipment\FrmCheckUser.resx">
+      <DependentUpon>FrmCheckUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidShipment\FrmShipmentInOut.resx">
+      <DependentUpon>FrmShipmentInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidTagInitial\FrmTagInitial.resx">
+      <DependentUpon>FrmTagInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidTagWrite\FrmTagWrite.resx">
+      <DependentUpon>FrmTagWrite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidTagWrite\FrmTagQuery.resx">
+      <DependentUpon>FrmTagQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RfidTagWrite\FrmSErpTagWrite.resx">
+      <DependentUpon>FrmSErpTagWrite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingAuthority\FrmModule.resx">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingAuthority\FrmSetAlien.resx">
+      <DependentUpon>FrmSetAlien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingAuthority\FrmUserModule.resx">
+      <DependentUpon>FrmUserModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingAuthority\FrmFingerprint.resx">
+      <DependentUpon>FrmFingerprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Authorization00\Authorization.exe.config" />
+    <None Include="bin\Debug\Authorization00\log\20180802.log" />
+    <None Include="bin\Debug\Lang.json" />
+    <None Include="bin\Debug\LoginInfo %2820240304%29.json" />
+    <None Include="bin\Debug\LoginInfo.json" />
+    <None Include="bin\Debug\RFIDClient.exe.config" />
+    <None Include="bin\Debug\RFIDClient.vshost.exe.config" />
+    <None Include="bin\Debug\RFIDClient.vshost.exe.manifest" />
+    <None Include="Lang.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlienLogo.jpg" />
+    <Content Include="bin\Debug\AlienRFID2.dll" />
+    <Content Include="bin\Debug\Authorization00\Authorization.exe" />
+    <Content Include="bin\Debug\Authorization00\configure.xml" />
+    <Content Include="bin\Debug\Authorization00\log4net.dll" />
+    <Content Include="bin\Debug\Authorization00\log4net.xml" />
+    <Content Include="bin\Debug\Authorization00\Oracle.ManagedDataAccess.dll" />
+    <Content Include="bin\Debug\Authorization00\RemoteDB.xml" />
+    <Content Include="bin\Debug\DPCtlUruNet.dll" />
+    <Content Include="bin\Debug\DPCtlUruNet.xml" />
+    <Content Include="bin\Debug\DPUruNet.dll" />
+    <Content Include="bin\Debug\DPUruNet.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\RfidAPI.dll" />
+    <Content Include="bin\Debug\RfidAPI.pdb" />
+    <Content Include="bin\Debug\RFIDClient.exe" />
+    <Content Include="bin\Debug\RFIDClient.pdb" />
+    <Content Include="bin\Debug\RFIDClient.vshost.exe" />
+    <Content Include="bin\Debug\RFIDModel.dll" />
+    <Content Include="bin\Debug\RFIDModel.pdb" />
+    <Content Include="bin\Debug\UHFAPI.dll" />
+    <Content Include="bin\Debug\UHFControl.dll" />
+    <Content Include="bin\Debug\UR4RFID.dll" />
+    <Content Include="Resources\Authorization.jpg" />
+    <Content Include="Resources\clear.jpg" />
+    <Content Include="Resources\ComPort.png" />
+    <Content Include="Resources\connect.png" />
+    <Content Include="Resources\country.png" />
+    <Content Include="Resources\disconnect.png" />
+    <Content Include="Resources\Error.png" />
+    <Content Include="Resources\fact.jpg" />
+    <Content Include="Resources\finder.ico" />
+    <None Include="Resources\finger_init.jpg" />
+    <Content Include="Resources\finger_no.jpg" />
+    <Content Include="Resources\finger_ok.jpg" />
+    <Content Include="Resources\FrmAccessControl.jpg" />
+    <None Include="Resources\FrmModule.jpg" />
+    <None Include="Resources\FrmDefault.jpg" />
+    <None Include="Resources\FrmFingerprint.jpg" />
+    <Content Include="Resources\FrmSErpTagWrite.jpg" />
+    <Content Include="Resources\FrmShipmentInOut.jpg" />
+    <Content Include="Resources\FrmTagInitial.jpg" />
+    <None Include="Resources\FrmTagQuery.jpg" />
+    <Content Include="Resources\FrmTagWrite.jpg" />
+    <None Include="Resources\FrmUserModule.jpg" />
+    <Content Include="Resources\imgbtnlogin.gif" />
+    <Content Include="Resources\key.jpg" />
+    <Content Include="Resources\login.jpg" />
+    <Content Include="Resources\Success.png" />
+    <Content Include="Resources\user.jpg" />
+    <Content Include="Resources\zhiding.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

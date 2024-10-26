@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58AC922D-5AFC-4DB0-B95E-BED795096F84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFID</RootNamespace>
+    <AssemblyName>RfidAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>com.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlienRFID2">
+      <HintPath>bin\Debug\AlienRFID2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UHFControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\UHFControl.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UR4RFID, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UR4RFID.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RFID\Command\Parameters.cs" />
+    <Compile Include="RFID\Command\TagPool.cs" />
+    <Compile Include="RFID\Command\TagStruct.cs" />
+    <Compile Include="RFID\AlienUHF\interfaces\IAutoReceive.cs" />
+    <Compile Include="RFID\AlienUHF\interfaces\IUHF.cs" />
+    <Compile Include="RFID\AlienUHF\interfaces\IUHFProtocolParse.cs" />
+    <Compile Include="RFID\ReaderAdapter.cs" />
+    <Compile Include="RFID\Reader\Alien.cs" />
+    <Compile Include="RFID\Reader\IReader.cs" />
+    <Compile Include="RFID\Reader\AlienUhf.cs" />
+    <Compile Include="RFID\AlienUHF\Receive\SerialPortReceive.cs" />
+    <Compile Include="RFID\AlienUHF\Receive\UdpReceive.cs" />
+    <Compile Include="RFID\AlienUHF\UHFAPI.cs" />
+    <Compile Include="RFID\AlienUHF\UHFTAGInfo.cs" />
+    <Compile Include="RFID\AlienUHF\usb\hid\Hid.cs" />
+    <Compile Include="RFID\AlienUHF\usb\hid\HIDInterface.cs" />
+    <Compile Include="RFID\AlienUHF\usb\hid\HidUtils.cs" />
+    <Compile Include="RFID\AlienUHF\usb\UHFAPIOfUsb.cs" />
+    <Compile Include="RFID\AlienUHF\usb\UHFProtocolParse.cs" />
+    <Compile Include="RFID\AlienUHF\usb\UsbNative.cs" />
+    <Compile Include="RFID\AlienUHF\usb\UsbUHFProtocolParse.cs" />
+    <Compile Include="RFID\AlienUHF\utils\Common.cs" />
+    <Compile Include="RFID\AlienUHF\utils\DataConvert.cs" />
+    <Compile Include="RFID\AlienUHF\utils\Debug.cs" />
+    <Compile Include="RFID\AlienUHF\utils\FileManage.cs" />
+    <Compile Include="RFID\AlienUHF\utils\IPConfig.cs" />
+    <Compile Include="RFID\AlienUHF\utils\MessageBoxEx.cs" />
+    <Compile Include="RFID\AlienUHF\utils\StringUtils.cs" />
+    <Compile Include="RFID\AlienUHF\utils\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="com.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

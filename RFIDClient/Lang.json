@@ -1,0 +1,88 @@
+﻿
+{
+  "CN":
+  {
+    "C0000": "语言",
+    "C0001": "地区",
+    "C0002": "厂别",
+    "C0003": "帐号",
+    "C0004": "密码",
+    "C0005": "登录",
+    "C0006": "正在检查SSO帐号",
+    "C0007": "批量初始化标签",
+    "C0008": "制程扫描",
+    "C0009": "样品仓入出库",
+    "C0010": "上消磁门禁管控",
+    "C0011": "Barcode 与 RFID Code 验证查询",
+    "C0012": "分层授权",
+		"C0013": "制程扫描 Sample ERP"
+  },
+  "TW":
+  {
+    "C0000": "語言",
+    "C0001": "地區",
+    "C0002": "廠別",
+    "C0003": "帳號",
+    "C0004": "密碼",
+    "C0005": "登錄",
+    "C0006": "正在檢查SSO帳號",
+    "C0007": "批量初始化標籤",
+    "C0008": "制程掃描",
+    "C0009": "樣品倉入出庫",
+    "C0010": "上消磁門禁管控",
+    "C0011": "Barcode 與 RFID Code 驗証查詢",
+    "C0012": "分層授權",
+		"C0013": "製程掃描 Sample ERP"
+  },
+  "EN":
+  {
+    "C0000": "Language",
+    "C0001": "Region",
+    "C0002": "Factory",
+    "C0003": "Account",
+    "C0004": "Password",
+    "C0005": "Login",
+    "C0006": "Checking the SSO",
+    "C0007": "Mass bath initialize chip",
+    "C0008": "Process scan",
+    "C0009": "Sample shoes in/out to the warehouse",
+    "C0010": "Degaussing for access control",
+    "C0011": "Barcode and RFID Code verify query",
+    "C0012": "Layered authorization",
+		"C0013": "Process scan Sample ERP"
+  },
+  "VN":
+  {
+    "C0000": "Ngôn ngữ",
+    "C0001": "Khu vực",
+    "C0002": "Nhà máy",
+    "C0003": "Tài khoản",
+    "C0004": "Mật khẩu",
+    "C0005": "Đăng nhập",
+    "C0006": "Kiểm tra tài khoản",
+    "C0007": "Định dạng con chip hàng loạt",
+    "C0008": "Scan quy trình chế tạo",
+    "C0009": "Xuất nhập kho giày mẫu",
+    "C0010": "Cài hủy từ chip để kiểm soát cửa cấm",
+    "C0011": "Mã vạch và RFID mã xác minh truy vấn",
+    "C0012": "Ủy quyền phân cấp",
+		"C0013": "Scan quy trình chế tạo Sample ERP"
+  },
+  "ID":
+  {
+    "C0000": "Bahasa",
+    "C0001": "Daerah",
+    "C0002": "Pabrik",
+    "C0003": "Akun",
+    "C0004": "Sandi",
+    "C0005": "Login",
+    "C0006": "Memeriksa SSO Account",
+    "C0007": "Inisialisasi label batch",
+    "C0008": "Process scan",
+    "C0009": "Gudang sample masuk/keluar",
+    "C0010": "Gunakan kontrol akses degaussing",
+    "C0011": "Barcode dan RFID kode verifikasi query",
+    "C0012": "Otorisasi berjenjang",
+		"C0013": "Process scan Sample ERP"
+  }
+}
